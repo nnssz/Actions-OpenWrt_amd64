@@ -15,11 +15,11 @@ sed -i 's/OpenWrt/jonnewton build $(date "+%Y.%m.%d") @ OpenWrt/g' package/lean/
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 # Add luci-app-unblockneteasemusic package
-#cd package
-#git clone https://github.com/project-openwrt/luci-app-unblockneteasemusic.git
-#cd ..
-#./scripts/feeds update -a
-#./scripts/feeds install -a
+cd package
+git clone https://github.com/project-openwrt/luci-app-unblockneteasemusic.git
+cd ..
+./scripts/feeds update -a
+./scripts/feeds install -a
 
 # Add kernel build user
 [ -z $(grep "CONFIG_KERNEL_BUILD_USER=" .config) ] &&
